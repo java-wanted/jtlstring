@@ -10,5 +10,9 @@ setup(
         ],
     install_requires=[
         'wheel',
+        'pytest_runner',
         ],
+    tests_require=[
+        'pytest',
+        ]
     )
