@@ -24,6 +24,27 @@ Examples:
 - Given AA = 0, AB = 0 and BB = 10, the function should return 'BB'.
 ```
 
+## SOLUTION
+
+Let there is an operation to solve the task:
+- Let string start with some two-letter item, may be empty.
+- There are up to three possibilities to add the next item, dependent on the
+  last one and counters.
+- For each possibilities use this operation to append a longest string,
+  and return the longest resulting string.
+- Of course, on each call to the operation a counter is decremented.
+
+```c
+; Find the longest two-letter string
+jtlstring(string, counters)
+    for each non zero counter
+      if it is possible to append the related item
+         call jtlstring(string + item, counters decremented)
+    return the longest of strings
+```
+
+Indeed, an iterative implementation must be provided.
+
 ## AUTHOR
 
   Boris Stankevich <microsoft-wanted@yandex.ru>.
